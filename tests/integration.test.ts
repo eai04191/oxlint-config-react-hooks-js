@@ -130,7 +130,7 @@ describe("oxlint extends loads rules correctly", () => {
         console.log(
             `[oxlint probe] env CI=${String(process.env.CI)} TERM=${String(process.env.TERM)} NO_COLOR=${String(process.env.NO_COLOR)} FORCE_COLOR=${String(process.env.FORCE_COLOR)}`,
         );
-        return (result.stdout ?? "") + (result.stderr ?? "");
+        return result.stdout + result.stderr;
     }
 
     function getRuleCount(output: string): number {
