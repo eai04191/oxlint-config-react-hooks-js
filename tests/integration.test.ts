@@ -1,5 +1,5 @@
 import { deepStrictEqual, ok, strictEqual } from "node:assert";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
@@ -115,11 +115,20 @@ describe("oxlint extends loads rules correctly", () => {
     const oxlintBin = resolve("node_modules/.bin/oxlint");
 
     function runOxlint(cwd: string): string {
-        return execFileSync(oxlintBin, ["."], {
+        const result = spawnSync(oxlintBin, ["."], {
             cwd,
             encoding: "utf-8",
             env: { ...process.env, NODE_PATH: join(projectRoot, "node_modules") },
         });
+        // DEBUG: probe CI-only missing "Finished ... with N rules" line
+        console.log(`[oxlint probe] cwd=${cwd}`);
+        console.log(`[oxlint probe] status=${String(result.status)} signal=${String(result.signal)}`);
+        console.log(`[oxlint probe] stdout=${JSON.stringify(result.stdout)}`);
+        console.log(`[oxlint probe] stderr=${JSON.stringify(result.stderr)}`);
+        console.log(
+            `[oxlint probe] env CI=${String(process.env.CI)} TERM=${String(process.env.TERM)} NO_COLOR=${String(process.env.NO_COLOR)} FORCE_COLOR=${String(process.env.FORCE_COLOR)}`,
+        );
+        return (result.stdout ?? "") + (result.stderr ?? "");
     }
 
     function getRuleCount(output: string): number {
