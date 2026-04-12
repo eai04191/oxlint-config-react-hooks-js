@@ -32,17 +32,17 @@
         "prepack": "run-s generate format && node scripts/prepack.ts"
     },
     "devDependencies": {
-        "@oxlint/migrate": "^1.59.0",
-        "@tsconfig/strictest": "^2.0.8",
-        "@types/node": "^25.6.0",
-        "eslint-plugin-react-hooks": "^7.0.1",
-        "npm-run-all2": "^8.0.4",
-        "oxfmt": "^0.44.0",
-        "oxlint": "^1.59.0",
-        "oxlint-config-presets": "^0.1.6",
-        "oxlint-tsgolint": "^0.20.0",
-        "semantic-release": "^25.0.3",
-        "typescript": "^6.0.2"
+        "@oxlint/migrate": "1.59.0",
+        "@tsconfig/strictest": "2.0.8",
+        "@types/node": "25.6.0",
+        "eslint-plugin-react-hooks": "7.0.1",
+        "npm-run-all2": "8.0.4",
+        "oxfmt": "0.44.0",
+        "oxlint": "1.59.0",
+        "oxlint-config-presets": "0.1.6",
+        "oxlint-tsgolint": "0.20.0",
+        "semantic-release": "25.0.3",
+        "typescript": "6.0.2"
     },
     "peerDependencies": {
         "eslint-plugin-react-hooks": ">=7.0.0"
