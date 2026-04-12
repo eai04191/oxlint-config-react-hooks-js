@@ -13,6 +13,10 @@ export const pluginConfigs = (
     reactHooksPlugin as { configs: Record<string, { rules: Record<string, unknown> }> }
 ).configs;
 
+export const pluginRuleNames = Object.keys(
+    (reactHooksPlugin as { rules: Record<string, unknown> }).rules,
+);
+
 export async function getNativeRuleShortNames(
     rules: Record<string, unknown>,
 ): Promise<Set<string>> {

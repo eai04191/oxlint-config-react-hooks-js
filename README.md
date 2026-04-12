@@ -22,6 +22,84 @@ Rules that oxlint already implements natively are automatically excluded using [
 
 <!-- PRESETS END -->
 
+### Rules
+
+<details>
+<summary>Rule breakdown per preset and opt-in rules</summary>
+
+<!-- RULES START -->
+
+#### `recommended`
+
+Enabled via JS plugin (15 rules, prefixed with `react-hooks-js/`):
+
+- `component-hook-factories`
+- `config`
+- `error-boundaries`
+- `gating`
+- `globals`
+- `immutability`
+- `incompatible-library`
+- `preserve-manual-memoization`
+- `purity`
+- `refs`
+- `set-state-in-effect`
+- `set-state-in-render`
+- `static-components`
+- `unsupported-syntax`
+- `use-memo`
+
+Excluded because oxlint covers them natively (2 rules):
+
+- `exhaustive-deps`
+- `rules-of-hooks`
+
+#### `recommended-latest`
+
+Enabled via JS plugin (16 rules, prefixed with `react-hooks-js/`):
+
+- `component-hook-factories`
+- `config`
+- `error-boundaries`
+- `gating`
+- `globals`
+- `immutability`
+- `incompatible-library`
+- `preserve-manual-memoization`
+- `purity`
+- `refs`
+- `set-state-in-effect`
+- `set-state-in-render`
+- `static-components`
+- `unsupported-syntax`
+- `use-memo`
+- `void-use-memo`
+
+Excluded because oxlint covers them natively (2 rules):
+
+- `exhaustive-deps`
+- `rules-of-hooks`
+
+#### Opt-in rules (not in any preset)
+
+Rules shipped by `eslint-plugin-react-hooks` that no preset enables (11 rules). Add them manually under `rules` with the `react-hooks-js/` prefix (see [Overriding rules](#overriding-rules)):
+
+- `automatic-effect-dependencies`
+- `capitalized-calls`
+- `fbt`
+- `fire`
+- `hooks`
+- `invariant`
+- `memoized-effect-dependencies`
+- `no-deriving-state-in-effects`
+- `rule-suppression`
+- `syntax`
+- `todo`
+
+<!-- RULES END -->
+
+</details>
+
 ## Installation
 
 ```sh
