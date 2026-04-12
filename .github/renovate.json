@@ -1,0 +1,23 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:best-practices"],
+    "automerge": true,
+    "platformAutomerge": true,
+    "packageRules": [
+        {
+            "matchPackageNames": ["eslint-plugin-react-hooks"],
+            "semanticCommitType": "feat",
+            "semanticCommitScope": "deps"
+        },
+        {
+            "matchPackageNames": ["eslint-plugin-react-hooks"],
+            "matchUpdateTypes": ["major"],
+            "commitMessagePrefix": "feat(deps)!:",
+            "commitBody": "BREAKING CHANGE: eslint-plugin-react-hooks major version bump"
+        },
+        {
+            "matchUpdateTypes": ["major"],
+            "automerge": false
+        }
+    ]
+}
