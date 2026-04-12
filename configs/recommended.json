@@ -1,6 +1,9 @@
 {
     "jsPlugins": [
-        { "name": "react-hooks-js", "specifier": "eslint-plugin-react-hooks" }
+        {
+            "name": "react-hooks-js",
+            "specifier": "eslint-plugin-react-hooks"
+        }
     ],
     "rules": {
         "react-hooks-js/static-components": "error",
