@@ -122,7 +122,9 @@ describe("oxlint extends loads rules correctly", () => {
         });
         // DEBUG: probe CI-only missing "Finished ... with N rules" line
         console.log(`[oxlint probe] cwd=${cwd}`);
-        console.log(`[oxlint probe] status=${String(result.status)} signal=${String(result.signal)}`);
+        console.log(
+            `[oxlint probe] status=${String(result.status)} signal=${String(result.signal)}`,
+        );
         console.log(`[oxlint probe] stdout=${JSON.stringify(result.stdout)}`);
         console.log(`[oxlint probe] stderr=${JSON.stringify(result.stderr)}`);
         console.log(
