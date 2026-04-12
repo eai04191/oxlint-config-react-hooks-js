@@ -1,0 +1,53 @@
+{
+    "name": "oxlint-config-react-hooks-js",
+    "version": "0.1.0",
+    "description": "Oxlint config presets for eslint-plugin-react-hooks JS plugin (React Compiler rules)",
+    "keywords": [
+        "lint",
+        "oxlint",
+        "react",
+        "react-compiler",
+        "react-hooks"
+    ],
+    "license": "MIT",
+    "files": [
+        "configs"
+    ],
+    "type": "module",
+    "exports": {
+        "./configs/*": "./configs/*"
+    },
+    "publishConfig": {
+        "directory": "dist"
+    },
+    "scripts": {
+        "generate": "node scripts/generate.ts",
+        "typecheck": "tsc --noEmit",
+        "lint": "oxlint",
+        "format": "oxfmt",
+        "format:check": "oxfmt --check",
+        "test": "node --test",
+        "check": "run-s generate format check:parallel",
+        "check:parallel": "run-p typecheck lint format:check test",
+        "prepack": "run-s generate format && node scripts/prepack.ts"
+    },
+    "devDependencies": {
+        "@oxlint/migrate": "^1.59.0",
+        "@tsconfig/strictest": "^2.0.8",
+        "@types/node": "^25.6.0",
+        "eslint-plugin-react-hooks": "^7.0.1",
+        "npm-run-all2": "^8.0.4",
+        "oxfmt": "^0.44.0",
+        "oxlint": "^1.59.0",
+        "oxlint-config-presets": "^0.1.6",
+        "oxlint-tsgolint": "^0.20.0",
+        "typescript": "^6.0.2"
+    },
+    "peerDependencies": {
+        "eslint-plugin-react-hooks": ">=7.0.0"
+    },
+    "engines": {
+        "node": ">=24"
+    },
+    "packageManager": "pnpm@10.33.0"
+}
