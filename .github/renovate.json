@@ -7,7 +7,8 @@
         {
             "matchPackageNames": ["eslint-plugin-react-hooks"],
             "semanticCommitType": "feat",
-            "semanticCommitScope": "deps"
+            "semanticCommitScope": "deps",
+            "minimumReleaseAge": null
         },
         {
             "matchPackageNames": ["eslint-plugin-react-hooks"],
