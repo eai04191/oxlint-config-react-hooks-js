@@ -1,11 +1,11 @@
 import { deepStrictEqual, ok, strictEqual } from "node:assert";
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { describe, it } from "node:test";
 
-import { PLUGIN_ALIAS, PRESETS } from "../scripts/lib.ts";
+import { PLUGIN_ALIAS, PRESETS, TYPE_DECLARATION_FILE } from "../scripts/lib.ts";
 
 describe("generated JSON presets", () => {
     for (const preset of PRESETS) {
@@ -92,15 +92,78 @@ describe("generated JSON presets", () => {
     });
 });
 
-describe("type declaration files", () => {
-    for (const preset of PRESETS) {
-        it(`${preset.name}.d.json.ts exists with correct content`, () => {
-            const dts = readFileSync(`configs/${preset.name}.d.json.ts`, "utf-8");
-            ok(dts.includes('import type { OxlintConfig } from "oxlint"'));
-            ok(dts.includes("declare const config: OxlintConfig"));
-            ok(dts.includes("export default config"));
-        });
-    }
+describe("type declaration file", () => {
+    it(`${TYPE_DECLARATION_FILE} exists with correct content`, () => {
+        const dts = readFileSync(TYPE_DECLARATION_FILE, "utf-8");
+        ok(dts.includes('import type { OxlintConfig } from "oxlint"'));
+        ok(dts.includes("declare const config: OxlintConfig"));
+        ok(dts.includes("export default config"));
+    });
+});
+
+describe("consumer TypeScript config", () => {
+    const projectRoot = resolve(".");
+    const tscBin = resolve("node_modules/.bin/tsc");
+
+    it("README oxlint.config.ts pattern typechecks via tsc", () => {
+        const tmpDir = mkdtempSync(join(tmpdir(), "oxlint-ts-test-"));
+        try {
+            mkdirSync(join(tmpDir, "node_modules"), { recursive: true });
+            symlinkSync(
+                join(projectRoot, "node_modules/oxlint"),
+                join(tmpDir, "node_modules/oxlint"),
+                "dir",
+            );
+            symlinkSync(
+                projectRoot,
+                join(tmpDir, "node_modules/oxlint-config-react-hooks-js"),
+                "dir",
+            );
+
+            writeFileSync(
+                join(tmpDir, "package.json"),
+                JSON.stringify({ name: "consumer-fixture", private: true, type: "module" }),
+            );
+            writeFileSync(
+                join(tmpDir, "tsconfig.json"),
+                JSON.stringify({
+                    compilerOptions: {
+                        target: "ES2022",
+                        module: "NodeNext",
+                        moduleResolution: "NodeNext",
+                        strict: true,
+                        noEmit: true,
+                        resolveJsonModule: true,
+                        esModuleInterop: true,
+                        skipLibCheck: true,
+                    },
+                    include: ["oxlint.config.ts"],
+                }),
+            );
+            writeFileSync(
+                join(tmpDir, "oxlint.config.ts"),
+                [
+                    'import { defineConfig } from "oxlint";',
+                    'import reactCompiler from "oxlint-config-react-hooks-js/configs/recommended-latest.json" with { type: "json" };',
+                    "",
+                    "export default defineConfig({",
+                    "    extends: [reactCompiler],",
+                    "    rules: {",
+                    '        "react-hooks-js/incompatible-library": "off",',
+                    "    },",
+                    "});",
+                    "",
+                ].join("\n"),
+            );
+
+            execFileSync(tscBin, ["--project", tmpDir], {
+                encoding: "utf-8",
+                stdio: "pipe",
+            });
+        } finally {
+            rmSync(tmpDir, { recursive: true, force: true });
+        }
+    });
 });
 
 describe("eslint-plugin-react-hooks resolution", () => {

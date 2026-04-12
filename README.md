@@ -130,7 +130,7 @@ export default defineConfig({
 });
 ```
 
-The JSON import is typed as `OxlintConfig` via the bundled `.d.json.ts` declaration files.
+The JSON import is typed as `OxlintConfig` via the bundled type declaration file exposed through the `types` subpath condition.
 
 ### Overriding rules
 

@@ -24,7 +24,10 @@
     ],
     "type": "module",
     "exports": {
-        "./configs/*": "./configs/*"
+        "./configs/*.json": {
+            "types": "./configs/oxlint-config.d.ts",
+            "default": "./configs/*.json"
+        }
     },
     "publishConfig": {
         "directory": "dist"
