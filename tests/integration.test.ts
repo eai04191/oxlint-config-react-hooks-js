@@ -128,7 +128,7 @@ describe("oxlint extends loads rules correctly", () => {
         console.log(`[oxlint probe] stdout=${JSON.stringify(result.stdout)}`);
         console.log(`[oxlint probe] stderr=${JSON.stringify(result.stderr)}`);
         console.log(
-            `[oxlint probe] env CI=${String(process.env.CI)} TERM=${String(process.env.TERM)} NO_COLOR=${String(process.env.NO_COLOR)} FORCE_COLOR=${String(process.env.FORCE_COLOR)}`,
+            `[oxlint probe] env CI=${String(process.env["CI"])} TERM=${String(process.env["TERM"])} NO_COLOR=${String(process.env["NO_COLOR"])} FORCE_COLOR=${String(process.env["FORCE_COLOR"])}`,
         );
         return result.stdout + result.stderr;
     }
