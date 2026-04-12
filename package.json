@@ -9,7 +9,16 @@
         "react-compiler",
         "react-hooks"
     ],
+    "homepage": "https://github.com/eai04191/oxlint-config-react-hooks-js#readme",
+    "bugs": {
+        "url": "https://github.com/eai04191/oxlint-config-react-hooks-js/issues"
+    },
     "license": "MIT",
+    "author": "y.takahashi <eai@mizle.net> (https://github.com/eai04191)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eai04191/oxlint-config-react-hooks-js.git"
+    },
     "files": [
         "configs"
     ],
