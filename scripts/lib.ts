@@ -45,6 +45,8 @@ export const PRESETS = [
     { name: "recommended-latest", configKey: "recommended-latest" },
 ] as const;
 
+export const TYPE_DECLARATION_FILE = "configs/oxlint-config.d.ts";
+
 export const TYPE_DECLARATION = [
     'import type { OxlintConfig } from "oxlint";',
     "declare const config: OxlintConfig;",

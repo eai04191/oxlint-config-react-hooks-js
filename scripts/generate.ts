@@ -4,6 +4,7 @@ import {
     PLUGIN_ALIAS,
     PRESETS,
     TYPE_DECLARATION,
+    TYPE_DECLARATION_FILE,
     buildConfig,
     getNativeRuleShortNames,
     pluginConfigs,
@@ -11,6 +12,8 @@ import {
 } from "./lib.ts";
 
 mkdirSync("configs", { recursive: true });
+
+writeFileSync(TYPE_DECLARATION_FILE, TYPE_DECLARATION);
 
 interface PresetDetail {
     name: string;
@@ -31,7 +34,6 @@ for (const preset of PRESETS) {
     const nativeRules = await getNativeRuleShortNames(presetConfig.rules);
     const config = buildConfig(presetConfig.rules, nativeRules);
     writeFileSync(`configs/${preset.name}.json`, JSON.stringify(config, null, 2) + "\n");
-    writeFileSync(`configs/${preset.name}.d.json.ts`, TYPE_DECLARATION);
 
     const sourceShortNames = new Set(
         Object.keys(presetConfig.rules).map((n) => n.replace(/^react-hooks\//, "")),
