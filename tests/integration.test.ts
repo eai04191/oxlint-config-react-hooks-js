@@ -115,7 +115,9 @@ describe("oxlint extends loads rules correctly", () => {
     const oxlintBin = resolve("node_modules/.bin/oxlint");
 
     function runOxlint(cwd: string): string {
-        return execFileSync(oxlintBin, ["."], {
+        // Force default format: oxlint auto-switches to `github` format under
+        // GITHUB_ACTIONS, which omits the "Finished ... with N rules" summary.
+        return execFileSync(oxlintBin, ["--format=default", "."], {
             cwd,
             encoding: "utf-8",
             env: { ...process.env, NODE_PATH: join(projectRoot, "node_modules") },
