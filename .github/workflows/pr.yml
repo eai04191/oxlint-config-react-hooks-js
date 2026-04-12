@@ -3,15 +3,54 @@ name: PR
 on:
   pull_request:
 
+permissions:
+  contents: write
+  statuses: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
       - run: corepack enable
       - uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
         with:
           node-version-file: package.json
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run check
+      - run: pnpm run generate
+      - run: pnpm run format
+      - name: Commit regenerated files
+        id: autocommit
+        if: github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: regenerate configs"
+            git push
+            echo "new_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Fail if diff on fork PR
+        if: github.event.pull_request.head.repo.full_name != github.repository
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "::error::configs/ or README.md out of sync. Run 'pnpm run generate' locally."
+            exit 1
+          fi
+      - run: pnpm run check:parallel
+      - name: Mark auto-commit SHA as passing
+        if: steps.autocommit.outputs.new_sha
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api \
+            -X POST \
+            "repos/${{ github.repository }}/statuses/${{ steps.autocommit.outputs.new_sha }}" \
+            -f state=success \
+            -f context=check \
+            -f description="Auto-regenerated and validated"
