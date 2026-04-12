@@ -3,15 +3,22 @@ name: PR
 on:
   pull_request:
 
-permissions:
-  contents: write
-  statuses: write
+concurrency:
+  group: pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions: {}
 
 jobs:
   check:
+    name: Check
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Push regenerated configs back to the PR branch
+      statuses: write # Mark the auto-commit SHA as passing so PRs can merge
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      # persist-credentials is required so the later autocommit step can push regenerated configs back to the PR branch
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2 # zizmor: ignore[artipacked]
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
@@ -47,10 +54,12 @@ jobs:
         if: steps.autocommit.outputs.new_sha
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ steps.autocommit.outputs.new_sha }}
         run: |
           gh api \
             -X POST \
-            "repos/${{ github.repository }}/statuses/${{ steps.autocommit.outputs.new_sha }}" \
+            "repos/$REPO/statuses/$SHA" \
             -f state=success \
             -f context=check \
             -f description="Auto-regenerated and validated"
