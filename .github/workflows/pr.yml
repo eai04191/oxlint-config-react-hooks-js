@@ -11,7 +11,7 @@ permissions: {}
 
 jobs:
   check:
-    name: Check
+    name: check
     runs-on: ubuntu-latest
     permissions:
       contents: write # Push regenerated configs back to the PR branch
