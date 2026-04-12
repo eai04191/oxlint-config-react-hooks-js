@@ -8,6 +8,9 @@ Oxlint's built-in `react` plugin covers `rules-of-hooks` and `exhaustive-deps` n
 
 Rules that oxlint already implements natively are automatically excluded using [@oxlint/migrate](https://www.npmjs.com/package/@oxlint/migrate).
 
+> [!WARNING]
+> This package runs `eslint-plugin-react-hooks` as an oxlint JS plugin, which is significantly slower than oxlint's native Rust-based rules. Expect a noticeable performance hit compared to a native-only setup.
+
 ## Presets
 
 <!-- PRESETS START -->
