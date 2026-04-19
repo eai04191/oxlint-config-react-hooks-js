@@ -17,8 +17,8 @@ Rules that oxlint already implements natively are automatically excluded using [
 
 | Preset                    | Rules | Source                                                |
 | ------------------------- | ----- | ----------------------------------------------------- |
-| `recommended.json`        | 15    | `recommended` from `eslint-plugin-react-hooks`        |
-| `recommended-latest.json` | 16    | `recommended-latest` from `eslint-plugin-react-hooks` |
+| `recommended.json`        | 14    | `recommended` from `eslint-plugin-react-hooks`        |
+| `recommended-latest.json` | 15    | `recommended-latest` from `eslint-plugin-react-hooks` |
 
 <!-- PRESETS END -->
 
@@ -31,9 +31,8 @@ Rules that oxlint already implements natively are automatically excluded using [
 
 #### `recommended`
 
-Enabled via JS plugin (15 rules, prefixed with `react-hooks-js/`):
+Enabled via JS plugin (14 rules, prefixed with `react-hooks-js/`):
 
-- `component-hook-factories`
 - `config`
 - `error-boundaries`
 - `gating`
@@ -56,9 +55,8 @@ Excluded because oxlint covers them natively (2 rules):
 
 #### `recommended-latest`
 
-Enabled via JS plugin (16 rules, prefixed with `react-hooks-js/`):
+Enabled via JS plugin (15 rules, prefixed with `react-hooks-js/`):
 
-- `component-hook-factories`
 - `config`
 - `error-boundaries`
 - `gating`
@@ -82,14 +80,15 @@ Excluded because oxlint covers them natively (2 rules):
 
 #### Opt-in rules (not in any preset)
 
-Rules shipped by `eslint-plugin-react-hooks` that no preset enables (11 rules). Add them manually under `rules` with the `react-hooks-js/` prefix (see [Overriding rules](#overriding-rules)):
+Rules shipped by `eslint-plugin-react-hooks` that no preset enables (12 rules). Add them manually under `rules` with the `react-hooks-js/` prefix (see [Overriding rules](#overriding-rules)):
 
-- `automatic-effect-dependencies`
 - `capitalized-calls`
+- `component-hook-factories`
+- `exhaustive-effect-dependencies`
 - `fbt`
-- `fire`
 - `hooks`
 - `invariant`
+- `memo-dependencies`
 - `memoized-effect-dependencies`
 - `no-deriving-state-in-effects`
 - `rule-suppression`
