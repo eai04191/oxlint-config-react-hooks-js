@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@oxlint/migrate':
-        specifier: 1.59.0
-        version: 1.59.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)
+        specifier: 1.60.0
+        version: 1.60.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)
       '@tsconfig/strictest':
         specifier: 2.0.8
         version: 2.0.8
@@ -665,8 +665,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxlint/migrate@1.59.0':
-    resolution: {integrity: sha512-GAnYfxHzRyiYcOnTMQp+VpDA85YMU/4mvZPhZHiaksB+94zTstays4WG5sPHzXLYw2hleG6lE2MJQn8qRkWxhQ==}
+  '@oxlint/migrate@1.60.0':
+    resolution: {integrity: sha512-Zt/6ABqJFvTVTO+ZG0BDUlcVNGDBtFZIXg6rAXpGqd93ZO6TtLWU1BzcaiZoe3wZ9hPOx6zv86QYZCGJqhthMQ==}
     hasBin: true
 
   '@pnpm/config.env-replace@1.1.0':
@@ -2628,7 +2628,7 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.59.0':
     optional: true
 
-  '@oxlint/migrate@1.59.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)':
+  '@oxlint/migrate@1.60.0(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)':
     dependencies:
       commander: 14.0.3
       globals: 17.4.0
