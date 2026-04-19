@@ -8,7 +8,6 @@
     "rules": {
         "react-hooks-js/static-components": "error",
         "react-hooks-js/use-memo": "error",
-        "react-hooks-js/component-hook-factories": "error",
         "react-hooks-js/preserve-manual-memoization": "error",
         "react-hooks-js/incompatible-library": "warn",
         "react-hooks-js/immutability": "error",
