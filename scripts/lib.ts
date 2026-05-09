@@ -4,7 +4,7 @@ import migrate from "@oxlint/migrate";
 
 const require = createRequire(import.meta.url);
 // eslint-plugin-react-hooks is CJS-only, so we need createRequire
-// oxlint-disable-next-line typescript-eslint(no-unsafe-assignment) -- CJS require return value
+// oxlint-disable-next-line typescript/no-unsafe-assignment -- CJS require return value
 const reactHooksPlugin: Record<string, unknown> = require("eslint-plugin-react-hooks");
 
 export const PLUGIN_ALIAS = "react-hooks-js";
