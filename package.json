@@ -51,7 +51,7 @@
         "npm-run-all2": "8.0.4",
         "oxfmt": "0.48.0",
         "oxlint": "1.63.0",
-        "oxlint-config-presets": "0.1.8",
+        "oxlint-config-presets": "0.1.9",
         "oxlint-tsgolint": "0.22.1",
         "semantic-release": "25.0.3",
         "typescript": "6.0.3"
