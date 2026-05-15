@@ -3,6 +3,17 @@
     "extends": ["config:best-practices"],
     "automerge": true,
     "platformAutomerge": true,
+    "customManagers": [
+        {
+            "customType": "jsonata",
+            "fileFormat": "json",
+            "managerFilePatterns": ["/(^|/)package\\.json$/"],
+            "matchStrings": [
+                "{ \"depName\": devEngines.packageManager.name, \"currentValue\": devEngines.packageManager.version }"
+            ],
+            "datasourceTemplate": "npm"
+        }
+    ],
     "packageRules": [
         {
             "matchPackageNames": ["eslint-plugin-react-hooks"],
@@ -19,6 +30,10 @@
         {
             "matchUpdateTypes": ["major"],
             "automerge": false
+        },
+        {
+            "matchPackageNames": ["pnpm"],
+            "groupName": "pnpm"
         }
     ]
 }
