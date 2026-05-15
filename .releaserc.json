@@ -11,6 +11,11 @@
                 "publishCmd": "pnpm publish --no-git-checks --provenance --access public"
             }
         ],
-        "@semantic-release/github"
+        [
+            "@semantic-release/github",
+            {
+                "successComment": false
+            }
+        ]
     ]
 }
