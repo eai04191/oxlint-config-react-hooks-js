@@ -47,7 +47,7 @@
         "@oxlint/migrate": "1.65.0",
         "@semantic-release/exec": "7.1.0",
         "@tsconfig/strictest": "2.0.8",
-        "@types/node": "25.8.0",
+        "@types/node": "25.9.0",
         "eslint-plugin-react-hooks": "7.1.1",
         "npm-run-all2": "8.0.4",
         "oxfmt": "0.50.0",
