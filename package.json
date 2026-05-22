@@ -44,7 +44,7 @@
         "prepack": "run-s generate format && node scripts/prepack.ts"
     },
     "devDependencies": {
-        "@oxlint/migrate": "1.65.0",
+        "@oxlint/migrate": "1.66.0",
         "@semantic-release/exec": "7.1.0",
         "@tsconfig/strictest": "2.0.8",
         "@types/node": "25.9.0",
