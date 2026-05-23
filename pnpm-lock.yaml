@@ -235,8 +235,8 @@ importers:
         specifier: 1.66.0
         version: 1.66.0(oxlint-tsgolint@0.23.0)
       oxlint-config-presets:
-        specifier: 0.1.10
-        version: 0.1.10(oxlint@1.66.0(oxlint-tsgolint@0.23.0))
+        specifier: 0.1.11
+        version: 0.1.11(oxlint@1.66.0(oxlint-tsgolint@0.23.0))
       oxlint-tsgolint:
         specifier: 0.23.0
         version: 0.23.0
@@ -1946,8 +1946,8 @@ packages:
       svelte:
         optional: true
 
-  oxlint-config-presets@0.1.10:
-    resolution: {integrity: sha512-iY11kaWP9+egIXZ3nsOrnKrikkIUF2/L9EOjz2irOHAQvVfRm6bwgM7Pk1gGK0Tdp6c49R+vMyychUBuPijbJw==}
+  oxlint-config-presets@0.1.11:
+    resolution: {integrity: sha512-dfJ/zfckviOdFJewBk8NFbertO2gscFaYDSRHuKLyJQhrZnmrdUVEK4iphQsZcrGpxipwHR5DklyzXoxwZ2lTg==}
     peerDependencies:
       oxlint: '>=0.15.0'
     peerDependenciesMeta:
@@ -3873,7 +3873,7 @@ snapshots:
       '@oxfmt/binding-win32-ia32-msvc': 0.51.0
       '@oxfmt/binding-win32-x64-msvc': 0.51.0
 
-  oxlint-config-presets@0.1.10(oxlint@1.66.0(oxlint-tsgolint@0.23.0)):
+  oxlint-config-presets@0.1.11(oxlint@1.66.0(oxlint-tsgolint@0.23.0)):
     optionalDependencies:
       oxlint: 1.66.0(oxlint-tsgolint@0.23.0)
 
