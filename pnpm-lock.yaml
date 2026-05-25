@@ -224,7 +224,7 @@ importers:
         version: 7.1.1(eslint@10.4.0)
       node:
         specifier: runtime:26
-        version: runtime:26.1.0
+        version: runtime:26.2.0
       npm-run-all2:
         specifier: 9.0.0
         version: 9.0.0
@@ -1017,8 +1017,8 @@ packages:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
-  baseline-browser-mapping@2.10.30:
-    resolution: {integrity: sha512-xjOFN16Ha1+Rz4nFYKqHU/LSB+gx/Vi3yQLX7r7sAW+Wa+8hhF2h4pvqTrTMc8+WcDBEunnUurr46Jvv0jk3Vg==}
+  baseline-browser-mapping@2.10.32:
+    resolution: {integrity: sha512-wbPvpyjJPC0zdfdKXxqEL3Ea+bOMD/87X4lftiJkkaBiuG6ALQy1SLmEd7BSmVCuwCQsBrCamgBoLyfFDD1EPg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -1045,8 +1045,8 @@ packages:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001792:
-    resolution: {integrity: sha512-hVLMUZFgR4JJ6ACt1uEESvQN1/dBVqPAKY0hgrV70eN3391K6juAfTjKZLKvOMsx8PxA7gsY1/tLMMTcfFLLpw==}
+  caniuse-lite@1.0.30001793:
+    resolution: {integrity: sha512-iwSsYWaCOoh26cV8NwNRViHlrfUvYsHDfRVcbtmw0Kg6PJIZZXwMkj1442FYLBGkeUf1juAsU3DTfxW579mrPA==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -1187,8 +1187,8 @@ packages:
   duplexer2@0.1.4:
     resolution: {integrity: sha512-asLFVfWWtJ90ZyOUHMqk7/S2w2guQKxUI2itj3d92ADHhxUSbCMGi1f1cBcJ7xM1To+pE/Khbwo1yuNbMEPKeA==}
 
-  electron-to-chromium@1.5.357:
-    resolution: {integrity: sha512-NHlTIQDK8fmVwHwuIzmXYEJ1Ewq3D9wDNc0cWXxDGysP6Pb21giwGNkxiTifyKy/4SoPuN5l6GLP1W9Sv7zB2g==}
+  electron-to-chromium@1.5.361:
+    resolution: {integrity: sha512-Q6Hts7N9FnJc5LeGRINFvLhCI9xZmNtTDe5ZbcVezQz7cU4a8Aua3GH1b8J2XY8Al9PF+OCwYqhgsOOheMdvkA==}
 
   emoji-regex@10.6.0:
     resolution: {integrity: sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==}
@@ -1624,8 +1624,8 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
-  lru-cache@11.3.6:
-    resolution: {integrity: sha512-Gf/KoL3C/MlI7Bt0PGI9I+TeTC/I6r/csU58N4BSNc4lppLBeKsOdFYkK+dX0ABDUMJNfCHTyPpzwwO21Awd3A==}
+  lru-cache@11.5.0:
+    resolution: {integrity: sha512-5YgH9UJd7wVb9hIouI2adWpgqrrICkt070Dnj8EUY1+B4B2P9eRLPAkAAo6NICA7CEhOIeBHl46u9zSNpNu7zA==}
     engines: {node: 20 || >=22}
 
   lru-cache@5.1.1:
@@ -1696,10 +1696,11 @@ packages:
     resolution: {integrity: sha512-Z3lTE9pLaJF47NyMhd4ww1yFTAP8YhYI8SleJiHzM46Fgpm5cnNzSl9XfzFNqbaz+VlJrIj3fXQ4DeN1Rjm6cw==}
     engines: {node: '>=18'}
 
-  node-releases@2.0.44:
-    resolution: {integrity: sha512-5WUyunoPMsvvEhS8AxHtRzP+oA8UCkJ7YRxatWKjngndhDGLiqEVAQKWjFAiAiuL8zMRGzGSJxFnLetoa43qGQ==}
+  node-releases@2.0.46:
+    resolution: {integrity: sha512-GYVXHE2KnrzAfsAjl4uP++evGFCrAU1jta4ubEjIG7YWt/64Gqv66a30yKwWczVjA6j3bM4nBwH7Pk1JmDHaxQ==}
+    engines: {node: '>=18'}
 
-  node@runtime:26.1.0:
+  node@runtime:26.2.0:
     resolution:
       type: variations
       variants:
@@ -1707,9 +1708,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-Z4CKdYYg5snMB1tcnHdgCjeTx75tRhDHBmrmeU6R2ws=
+            integrity: sha256-zvLmWJf5cIi1EvkiiWpW3j7AYU0CCBbvDst2KQ5wi4E=
             type: binary
-            url: https://nodejs.org/download/release/v26.1.0/node-v26.1.0-aix-ppc64.tar.gz
+            url: https://nodejs.org/download/release/v26.2.0/node-v26.2.0-aix-ppc64.tar.gz
           targets:
             - cpu: ppc64
               os: aix
@@ -1717,9 +1718,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-kQY/ZlwvXW5p5Pj8tm09R2vCeFrOgiZydL9Np4mYXOs=
+            integrity: sha256-LYV1tqdJwLxmzG7NIqlS99m787Dqdvyw7TzoWAGK//c=
             type: binary
-            url: https://nodejs.org/download/release/v26.1.0/node-v26.1.0-darwin-arm64.tar.gz
+            url: https://nodejs.org/download/release/v26.2.0/node-v26.2.0-darwin-arm64.tar.gz
           targets:
             - cpu: arm64
               os: darwin
@@ -1727,9 +1728,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-M1GbKKNS3maKsKKmQ2bbAypFy2KdU1P4bkV24ngPT88=
+            integrity: sha256-JqVIDQ3ZUr6Gvq6D5mNtrNej/9F+9R0LJrybJg8rQuk=
             type: binary
-            url: https://nodejs.org/download/release/v26.1.0/node-v26.1.0-darwin-x64.tar.gz
+            url: https://nodejs.org/download/release/v26.2.0/node-v26.2.0-darwin-x64.tar.gz
           targets:
             - cpu: x64
               os: darwin
@@ -1737,9 +1738,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-/LTDOe73DJCcrnIJEAimSXJ44tD80iHAZTBoz06k8Mc=
+            integrity: sha256-v1JGHSUBdHnNxUlkLE56IwOsXFOV18PQJtXYs/ooPAU=
             type: binary
-            url: https://nodejs.org/download/release/v26.1.0/node-v26.1.0-linux-arm64.tar.gz
+            url: https://nodejs.org/download/release/v26.2.0/node-v26.2.0-linux-arm64.tar.gz
           targets:
             - cpu: arm64
               os: linux
@@ -1747,9 +1748,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-8+5yop09JaYmuuFnJmelALEsKE/PwA9dYWLjdi6/Fz8=
+            integrity: sha256-S1JCmzWgSaDPV0NgzRsRy8nwMgHROHbyaJfJhj0l7Ek=
             type: binary
-            url: https://nodejs.org/download/release/v26.1.0/node-v26.1.0-linux-ppc64le.tar.gz
+            url: https://nodejs.org/download/release/v26.2.0/node-v26.2.0-linux-ppc64le.tar.gz
           targets:
             - cpu: ppc64le
               os: linux
@@ -1757,9 +1758,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-bjgeSjs1PzNdKXq/5MfZSFRZJHUZ3xBEWxfMidjH96U=
+            integrity: sha256-nQZJFOOKWz5qMHRkdAcZgRb3vHJPzlqWAM7OhKx9pnE=
             type: binary
-            url: https://nodejs.org/download/release/v26.1.0/node-v26.1.0-linux-s390x.tar.gz
+            url: https://nodejs.org/download/release/v26.2.0/node-v26.2.0-linux-s390x.tar.gz
           targets:
             - cpu: s390x
               os: linux
@@ -1767,9 +1768,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-YtVVwyngXjYlEJ8uOotRlbNo1e84JmKSRp0y9jzZj/0=
+            integrity: sha256-jltLlpuyQUrKL/hNK5lghRGu3KMr+KhCfmGH291wO74=
             type: binary
-            url: https://nodejs.org/download/release/v26.1.0/node-v26.1.0-linux-x64.tar.gz
+            url: https://nodejs.org/download/release/v26.2.0/node-v26.2.0-linux-x64.tar.gz
           targets:
             - cpu: x64
               os: linux
@@ -1777,10 +1778,10 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-C5E9Z8zvPn5i7c7NLa8x3l/ZVRk2UBzNPNXAJ62gie4=
-            prefix: node-v26.1.0-win-arm64
+            integrity: sha256-Ex76i9hY+K0AChoENti7EyDGOCkcd5qSH7IOVwKhzAo=
+            prefix: node-v26.2.0-win-arm64
             type: binary
-            url: https://nodejs.org/download/release/v26.1.0/node-v26.1.0-win-arm64.zip
+            url: https://nodejs.org/download/release/v26.2.0/node-v26.2.0-win-arm64.zip
           targets:
             - cpu: arm64
               os: win32
@@ -1788,10 +1789,10 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-CJoCxMaHRRyfC38b/SUtroWnuiffApWhQJa9zJVv3JI=
-            prefix: node-v26.1.0-win-x64
+            integrity: sha256-NxBxpPfiyKXdKAcwBJxoWRH+7MWfUOvEiNZ13BCHxpw=
+            prefix: node-v26.2.0-win-x64
             type: binary
-            url: https://nodejs.org/download/release/v26.1.0/node-v26.1.0-win-x64.zip
+            url: https://nodejs.org/download/release/v26.2.0/node-v26.2.0-win-x64.zip
           targets:
             - cpu: x64
               os: win32
@@ -1799,9 +1800,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-fO0dmDu7kkXJfbx94ylmPaSb2IrKb3uq7ZuvL2+sfTM=
+            integrity: sha256-RZPYIgEv4yOIFHIZCUCMZvKoKVXgFBRXZDp6TIThMv0=
             type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v26.1.0/node-v26.1.0-linux-arm64-musl.tar.gz
+            url: https://unofficial-builds.nodejs.org/download/release/v26.2.0/node-v26.2.0-linux-arm64-musl.tar.gz
           targets:
             - cpu: arm64
               os: linux
@@ -1810,14 +1811,14 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-4wLoIM6hAH3+aPX6qiPI7Vpwma1IzwaNbevz1JWPqu8=
+            integrity: sha256-nvyZMy4c9w7rhWGDmEZ8nTObwgi+ZRFTgMYR3aTChAc=
             type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v26.1.0/node-v26.1.0-linux-x64-musl.tar.gz
+            url: https://unofficial-builds.nodejs.org/download/release/v26.2.0/node-v26.2.0-linux-x64-musl.tar.gz
           targets:
             - cpu: x64
               os: linux
               libc: musl
-    version: 26.1.0
+    version: 26.2.0
     hasBin: true
 
   normalize-package-data@6.0.2:
@@ -1828,8 +1829,8 @@ packages:
     resolution: {integrity: sha512-RWk+PI433eESQ7ounYxIp67CYuVsS1uYSonX3kA6ps/3LWfjVQa/ptEg6Y3T6uAMq1mWpX9PQ+qx+QaHpsc7gQ==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
-  normalize-url@9.0.0:
-    resolution: {integrity: sha512-z9nC87iaZXXySbWWtTHfCFJyFvKaUAW6lODhikG7ILSbVgmwuFjUqkgnheHvAUcGedO29e2QGBRXMUD64aurqQ==}
+  normalize-url@9.0.1:
+    resolution: {integrity: sha512-ARftfC5HdUNu9jJeL8pHj8debUIHA2b91FizCoMzY4lG6dDX13jdvTK0TBe24IBDRf2HvJSzzwEPvmbkQWHRSg==}
     engines: {node: '>=20'}
 
   npm-normalize-package-bin@6.0.0:
@@ -1849,8 +1850,8 @@ packages:
     resolution: {integrity: sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA==}
     engines: {node: '>=18'}
 
-  npm@11.14.1:
-    resolution: {integrity: sha512-aopNZ0eEl6LbxoFcrXLmTEPzNBNxfiQnVgR9RmJBqzm+5h5pFoOmRljpRJbsXxocBeSl7GLcx3MoDf2UlEOjZw==}
+  npm@11.15.0:
+    resolution: {integrity: sha512-+k0tk7lRnpMUPnC7kTuU/yrV/mnFoPhJQ75VfLtZ6fwbzOVXaPsTE/Il9Pn1DHi482byMyqkHv/XsQ76mNjXLw==}
     engines: {node: ^20.17.0 || >=22.9.0}
     hasBin: true
     bundledDependencies:
@@ -2162,8 +2163,8 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.8.0:
-    resolution: {integrity: sha512-AcM7dV/5ul4EekoQ29Agm5vri8JNqRyj39o0qpX6vDF2GZrtutZl5RwgD1XnZjiTAfncsJhMI48QQH3sN87YNA==}
+  semver@7.8.1:
+    resolution: {integrity: sha512-rkVq3IXh+4FDGch+KwzX3aV9W3kO54GyEgpvBzSyctDA6Xtd7RJQV1xmXbeQp5v7+VzLOfVqiutSE6GICgPFvg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2175,8 +2176,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shell-quote@1.8.3:
-    resolution: {integrity: sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==}
+  shell-quote@1.8.4:
+    resolution: {integrity: sha512-VsC6n6vz1ihYYyZZwX7YZSF5l5x36ca17OC+a69h94YqB7X6XLwf+5MOgynYir2SLFUbl8gIYvBo8K8RoNQ6bQ==}
     engines: {node: '>= 0.4'}
 
   signal-exit@4.1.0:
@@ -3025,13 +3026,13 @@ snapshots:
       fs-extra: 11.3.5
       lodash-es: 4.18.1
       nerf-dart: 1.0.0
-      normalize-url: 9.0.0
-      npm: 11.14.1
+      normalize-url: 9.0.1
+      npm: 11.15.0
       rc: 1.2.8
       read-pkg: 10.1.0
       registry-auth-token: 5.1.1
       semantic-release: 25.0.3(typescript@6.0.3)
-      semver: 7.8.0
+      semver: 7.8.1
       tempy: 3.2.0
 
   '@semantic-release/release-notes-generator@14.1.1(semantic-release@25.0.3(typescript@6.0.3))':
@@ -3126,7 +3127,7 @@ snapshots:
 
   balanced-match@4.0.4: {}
 
-  baseline-browser-mapping@2.10.30: {}
+  baseline-browser-mapping@2.10.32: {}
 
   before-after-hook@4.0.0: {}
 
@@ -3142,15 +3143,15 @@ snapshots:
 
   browserslist@4.28.2:
     dependencies:
-      baseline-browser-mapping: 2.10.30
-      caniuse-lite: 1.0.30001792
-      electron-to-chromium: 1.5.357
-      node-releases: 2.0.44
+      baseline-browser-mapping: 2.10.32
+      caniuse-lite: 1.0.30001793
+      electron-to-chromium: 1.5.361
+      node-releases: 2.0.46
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
   callsites@3.1.0: {}
 
-  caniuse-lite@1.0.30001792: {}
+  caniuse-lite@1.0.30001793: {}
 
   chalk@2.4.2:
     dependencies:
@@ -3236,7 +3237,7 @@ snapshots:
       conventional-commits-filter: 5.0.0
       handlebars: 4.7.9
       meow: 13.2.0
-      semver: 7.8.0
+      semver: 7.8.1
 
   conventional-commits-filter@5.0.0: {}
 
@@ -3290,7 +3291,7 @@ snapshots:
     dependencies:
       readable-stream: 2.3.8
 
-  electron-to-chromium@1.5.357: {}
+  electron-to-chromium@1.5.361: {}
 
   emoji-regex@10.6.0: {}
 
@@ -3543,7 +3544,7 @@ snapshots:
 
   hosted-git-info@9.0.3:
     dependencies:
-      lru-cache: 11.3.6
+      lru-cache: 11.5.0
 
   http-proxy-agent@9.0.0:
     dependencies:
@@ -3700,7 +3701,7 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
-  lru-cache@11.3.6: {}
+  lru-cache@11.5.0: {}
 
   lru-cache@5.1.1:
     dependencies:
@@ -3767,23 +3768,23 @@ snapshots:
       emojilib: 2.4.0
       skin-tone: 2.0.0
 
-  node-releases@2.0.44: {}
+  node-releases@2.0.46: {}
 
-  node@runtime:26.1.0: {}
+  node@runtime:26.2.0: {}
 
   normalize-package-data@6.0.2:
     dependencies:
       hosted-git-info: 7.0.2
-      semver: 7.8.0
+      semver: 7.8.1
       validate-npm-package-license: 3.0.4
 
   normalize-package-data@8.0.0:
     dependencies:
       hosted-git-info: 9.0.3
-      semver: 7.8.0
+      semver: 7.8.1
       validate-npm-package-license: 3.0.4
 
-  normalize-url@9.0.0: {}
+  normalize-url@9.0.1: {}
 
   npm-normalize-package-bin@6.0.0: {}
 
@@ -3795,7 +3796,7 @@ snapshots:
       picomatch: 4.0.4
       pidtree: 0.6.0
       read-package-json-fast: 6.0.0
-      shell-quote: 1.8.3
+      shell-quote: 1.8.4
       which: 7.0.0
 
   npm-run-path@5.3.0:
@@ -3807,7 +3808,7 @@ snapshots:
       path-key: 4.0.0
       unicorn-magic: 0.3.0
 
-  npm@11.14.1: {}
+  npm@11.15.0: {}
 
   object-assign@4.1.1: {}
 
@@ -4101,7 +4102,7 @@ snapshots:
       p-reduce: 3.0.0
       read-package-up: 12.0.0
       resolve-from: 5.0.0
-      semver: 7.8.0
+      semver: 7.8.1
       signale: 1.4.0
       yargs: 18.0.0
     transitivePeerDependencies:
@@ -4112,7 +4113,7 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.8.0: {}
+  semver@7.8.1: {}
 
   shebang-command@2.0.0:
     dependencies:
@@ -4120,7 +4121,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shell-quote@1.8.3: {}
+  shell-quote@1.8.4: {}
 
   signal-exit@4.1.0: {}
 
