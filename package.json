@@ -52,7 +52,7 @@
         "npm-run-all2": "9.0.1",
         "oxfmt": "0.54.0",
         "oxlint": "1.69.0",
-        "oxlint-config-presets": "0.1.11",
+        "oxlint-config-presets": "0.1.12",
         "oxlint-tsgolint": "0.23.0",
         "semantic-release": "25.0.5",
         "typescript": "6.0.3"
