@@ -49,7 +49,7 @@
         "@tsconfig/strictest": "2.0.8",
         "@types/node": "25.9.3",
         "eslint-plugin-react-hooks": "7.1.1",
-        "npm-run-all2": "9.0.1",
+        "npm-run-all2": "9.0.2",
         "oxfmt": "0.54.0",
         "oxlint": "1.69.0",
         "oxlint-config-presets": "0.1.12",
