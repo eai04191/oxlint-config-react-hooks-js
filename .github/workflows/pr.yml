@@ -18,8 +18,8 @@ jobs:
       statuses: write # Mark the auto-commit SHA as passing so PRs can merge
     steps:
       # persist-credentials is required so the later autocommit step can push regenerated configs back to the PR branch
-      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0 # zizmor: ignore[artipacked]
-        with:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with: # zizmor: ignore[artipacked]
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
       - run: corepack enable
