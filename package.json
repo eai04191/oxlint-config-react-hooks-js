@@ -51,7 +51,7 @@
         "eslint-plugin-react-hooks": "7.1.1",
         "npm-run-all2": "9.0.2",
         "oxfmt": "0.60.0",
-        "oxlint": "1.74.0",
+        "oxlint": "1.75.0",
         "oxlint-config-presets": "0.1.16",
         "oxlint-tsgolint": "0.25.0",
         "semantic-release": "25.0.8",
