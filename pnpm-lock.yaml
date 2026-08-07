@@ -208,8 +208,8 @@ importers:
   .:
     devDependencies:
       '@oxlint/migrate':
-        specifier: 1.76.0
-        version: 1.76.0
+        specifier: 1.77.0
+        version: 1.77.0
       '@semantic-release/exec':
         specifier: 7.1.0
         version: 7.1.0(semantic-release@25.0.8(supports-color@7.2.0)(typescript@7.0.2))(supports-color@7.2.0)
@@ -873,8 +873,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxlint/migrate@1.76.0':
-    resolution: {integrity: sha512-bjfMdLaQv/OKgLn07QQV2fDa15COU8RzW0Cr8tVoCplu7PdOkpUJsFDzaPJa84/AU8qOtZIDfind2Mk9ZZlcCA==}
+  '@oxlint/migrate@1.77.0':
+    resolution: {integrity: sha512-QpBKMqQXYb8aaXTlPdNhJSSWHFvafFMiofmZP2ZQbC8Dzg+A3g5StrJ28zCvmNSzbL0JoKkMMOsolyaWyE7K/Q==}
     hasBin: true
 
   '@pnpm/config.env-replace@1.1.0':
@@ -3096,7 +3096,7 @@ snapshots:
   '@oxlint/binding-win32-x64-msvc@1.77.0':
     optional: true
 
-  '@oxlint/migrate@1.76.0':
+  '@oxlint/migrate@1.77.0':
     dependencies:
       commander: 15.0.0
       globals: 17.8.0
