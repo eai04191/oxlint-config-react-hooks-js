@@ -54,7 +54,7 @@
         "oxlint": "1.77.0",
         "oxlint-config-presets": "0.1.18",
         "oxlint-tsgolint": "7.0.2001",
-        "semantic-release": "25.0.8",
+        "semantic-release": "25.0.9",
         "typescript": "7.0.2"
     },
     "peerDependencies": {
