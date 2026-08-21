@@ -50,7 +50,7 @@
         "@types/node": "25.9.5",
         "eslint-plugin-react-hooks": "7.1.1",
         "npm-run-all2": "9.0.3",
-        "oxfmt": "0.63.0",
+        "oxfmt": "0.64.0",
         "oxlint": "1.78.0",
         "oxlint-config-presets": "0.1.19",
         "oxlint-tsgolint": "7.0.2001",
