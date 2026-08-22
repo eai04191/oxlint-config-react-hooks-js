@@ -2,27 +2,12 @@
 
 Oxlint config presets for [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) as a JS plugin. Provides React Compiler lint rules as individual, per-rule-configurable rules.
 
-> [!NOTE]
-> Since oxlint v1.70.0, oxlint ships a native [`react/react-compiler`](https://oxc.rs/docs/guide/usage/linter/rules/react/react-compiler.html) rule (nursery) that runs oxc's Rust port of the React Compiler in lint-only mode. **Unless you have a specific reason to use this package, prefer the native rule**: it is much faster and needs no JS plugin setup.
->
-> ```json
-> {
->     "plugins": ["react"],
->     "rules": {
->         "react/react-compiler": "warn"
->     }
-> }
-> ```
->
-> Reasons to keep using this package instead:
->
-> - You need **per-rule granularity**. The native rule is a single all-in-one rule, so you cannot disable or change severity of individual checks like `incompatible-library` or `set-state-in-effect`
-> - You want the behavior of the **official `eslint-plugin-react-hooks`** rather than oxc's Rust reimplementation, which may lag behind upstream React Compiler releases
-> - The native rule is still in the **nursery** category (experimental, off by default)
+> [!WARNING]
+> This package is deprecated and no longer maintained. Oxlint v1.79.0 and later provide native, individually configurable React Compiler rules. Remove this package and migrate to oxlint's built-in [`react` rules](https://oxc.rs/docs/guide/usage/linter/rules.html).
 
 ## Why
 
-Oxlint's built-in `react` plugin covers `rules-of-hooks` and `exhaustive-deps` natively, but the React Compiler rules (introduced in eslint-plugin-react-hooks v7) have no native per-rule oxlint equivalent. This package bridges the gap by configuring `eslint-plugin-react-hooks` as an oxlint JS plugin with the correct alias and rule settings.
+When this package was created, oxlint's built-in `react` plugin covered `rules-of-hooks` and `exhaustive-deps` natively, but the React Compiler rules introduced in eslint-plugin-react-hooks v7 had no native per-rule oxlint equivalent. This package bridged that gap by configuring `eslint-plugin-react-hooks` as an oxlint JS plugin with the correct alias and rule settings.
 
 Rules that oxlint already implements natively are automatically excluded using [@oxlint/migrate](https://www.npmjs.com/package/@oxlint/migrate).
 
